@@ -1,0 +1,88 @@
+<html>
+<head>
+  <title>폼 연습</title>
+</head>
+<body>
+<h2>양식 폼 연습하기</h2>
+<form name=myform method=post>
+  <p>성명1 : <input type=text name="name1" id="name1" required /></p> <!--required 필수입력란기능-->
+  <p>성명2 : <input type=text name="name2" id="name2" size=10/></p>
+  <p>성명3 : <input type=text name="name3" id="name3" size=10 maxlength=10/></p> <!--maxlength=10 입력가능 최대값-->
+  <p>성명4 : <input type=text name="name4" id="name4" value=홍길동 size=10 maxlength=10/></p> <!--value 기본입력되있음-->
+  <p>성명5 : <input type=text name="name5" id="name5" size=10 maxlength=10 autofocus/></p> <!--autofocus 해당입력창으로 커서위치-->
+  <p>성명6 : <input type=text name="name6" id="name6" maxlength=10 placeholder="성명을 입력하세요."/></p> <!--placeholder=  입력안내-->
+  <p>이메일 : <input type=email name="email" id="email" /></p> <!--type=email 이메일양식-->
+  <p>홈페이지 : <input type=text name="homepage" id="homepage" /></p>
+  <p>전화번호 : <input type=tel name="tel" id="tel" /></p>
+  <p>색상 : <input type=color name="color" id="color" /></p> <!--type=color 색상선택-->
+  <p>생일 : <input type=date name="birthday" id="birthday" /></p> <!--type=date 날짜선택-->
+  <p>출근시간 : <input type=time name="starttime" id="starttime" /></p> <!--type=time 시간선택-->  
+  <p>입고사항 : <input type=datetime-local name="ipgo" id="ipgo" /></p> <!--type=datetime-local 날짜 및 시간선택-->    
+  <p>비밀번호 : <input type=password name="pwd" id="pwd" /></p> <!--type=password  입력창비공개-->
+  <p>나이1 : <input type=number name="age1" id="age1"></p> <!--type=number  숫자만입력-->
+  <p>나이2 : <input type=number name="age2" id="age2" size=3 min=17 max=120/></p> <!-- min,max= 입력가능한 숫자값 한계 -->
+  <p>수량1 : <input type=number name="ea1" id="ea1" min=0 max=100 /></p>
+  <p>수량2(묶음) : <input type=number name="ea2" id="ea2" min=0 max=100 step=10 /></p> <!-- step= 최소 단위 -->
+  <p>성별 : 
+    <input type=radio name="gender" id="male" value="남자"/>남자 <!-- type=radio 버튼형식 -->
+    <input type=radio name="gender" id="female" value="여자" checked/>여자 <!-- checked 기본값으로 입력되어있음 -->
+  </p>
+  <p>소지한카드 :
+    <input type=checkbox name="card" id="card1" value="LG카드">LG카드 <!-- type=checkbox --> <!-- radio와의 차이는 체크해제가 가능-->
+    <input type=checkbox name="card" id="card2" value="삼성카드">삼성카드
+    <input type=checkbox name="card" id="card3" value="농협카드">농협카드
+    <input type=checkbox name="card" id="card4" value="BC카드">BC카드
+    <input type=checkbox name="card" id="card5" value="신한카드">신한카드
+    <input type=checkbox name="card" id="card6" value="기타">기타
+    <input type=text name="cardtext" id="cardtext" size=5 />
+  </p>
+  <p>특기
+    <select name="skill" id="skill" >  <!-- select 콤보박스, option 선택항목 > 이게 값으로 넘어감 -->
+      <option value="" selected>--- 필수선택 ---</option>  <!-- selected 기본 선택값-->
+      <option value="축구">축구</option>
+      <option value="야구">야구</option>
+      <option value="수영">수영</option>
+      <option value="악기">악기</option>
+      <option value="게임">게임</option>
+      <option value="농구">농구</option>
+      <option value="노래">노래</option>
+      <option value="기타">기타</option> 
+    </select>
+  </p>
+  <p>취미
+     <select name="hobby" id="hobby" size=5 multiple> <!-- select 콤보박스에 size값을 주면 리스트박스, multiple을 주면 여러개 선택가능-->
+      <option>등산</option>
+      <option>낚시</option>
+      <option>바이크</option>
+      <option>바둑</option>
+      <option>수영</option>
+      <option>독서</option>
+      <option>영화감상</option>
+      <option>음악감상</option>
+      <option>동전수집</option>
+      <option>그림</option>
+     </select>
+  </p>
+  <p>
+    <!--textarea 메모장처럼 입력가능 rows행크기 cols 줄길이인데 웹에서 크기조절 가능-->
+    <!--<textarea>와</textarea> 사이에 공백을 만들면 placeholder가 안나옴-->
+    <textarea rows=5 cols=50 name="content" id="content" placeholder="자기소개를 입력하세요" /></textarea>  
+  </p>
+  <p>
+    <!--type=file 첨부파일 입력기능-->
+    <input type=file name="filename" id="filename" placeholder="첨부할 파일을 선택" />
+  </p>
+  <p>
+    <!--type=submit 입력값을 서버로 전송하는 버튼이고 value에 넣은 값이 버튼이름으로 나옴-->
+    <input type=submit value=전송 /> 
+    <!--type=reset 입력했던 값들을 전부 지우고 초기화-->
+    <input type=reset value=입력취소 /> 
+    <!--type=button 값을 제대로 입력했는지를 체크해줌-->
+    <input type=button value=입력체크 />    
+  </p>
+  <p></p>
+  <p></p>
+  <p></p>
+</form>
+</body>
+</html>
