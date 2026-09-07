@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- ut8설정 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 설정 -->
+  <title>test6.html(CSS연습)</title>
+  <style>
+    *{
+      background-color: #ddd;
+      color: blue;
+    }
+    h2 {color: rgb(65, 105, 225);}
+    /* p {font-size: 40px;} */
+    span {
+      color: aqua; 
+      font-size: 25px;
+    }
+    div {background-color: bisque;}
+    .mbc {      /* class 그룹 제어하는법*/
+      font-size: 20px;
+      color: brown;
+    } 
+    #sbs {      /* id select 제어하는법*/
+      color: #fff;
+      background-color: red;
+    }
+    .kbs {font-family: '궁서체', '굴림체', '명조체';}
+    .kbs#cbs {
+      font-family: '궁서체', '굴림체', '명조체';
+      font-size: 20px;
+      color: red;
+      background-color: rgb(132, 0, 255);
+    }
+    .seoul {background-color: blue;}
+    p#aaa {
+      font-size: 30px;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+  <h2>CSS연습</h2>
+  <p id="aaa">1.안녕하세요</p>
+  <p style="font-size: 60px;">2.안녕하세요</p>
+  <p>3.안녕하세요</p>
+  <p class="mbc">4.안녕하세요</p>
+  <p>5.안녕하세요</p>
+  <p class="mbc">6.안녕하세요</p>
+  <p id="sbs">7.안녕하세요</p>
+  <p class="mbc">8.안녕하세요</p>
+  <p>9.안녕하세요</p>
+  <div>10.안녕하세요</div>
+  <p>11.<span>안녕</span>하세요</p>
+  <p>12.안녕하세요</p>
+  <p>13.안녕하세요</p>
+  <div class="kbs">
+    <div>14-1.안녕하세요</div>
+    <div id="cbs">14-2.안녕하세요</div>
+    <div class="seoul">14-3.안녕하세요</div>
+    <div>14-4.안녕하세요</div>
+  </div>
+  <div>15.안녕하세요</div>
+  <div class="seoul">16.안녕하세요</div>
+</body>
+</html>
