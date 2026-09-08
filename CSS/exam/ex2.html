@@ -3,19 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ex1.html</title>
+  <title>ex2.html</title>
   <style>
-
+    .aa {
+      margin: 20px 45px;
+    }
+    .aa label {
+      display: inline-block;
+      width: 160px;
+    }
+    .ss {
+      font-size: 13px;
+    }
   </style>
 </head>
 <body>
   <div>
     <h3>등록정보</h3>
-    <div>
-      <p>참여인원(최대10명)</p>
-      <p>참여인원(최대10명)</p>
-      <p>참여인원(최대10명)</p>
-    </div>
+    <form>
+      <div class="aa">
+        <label>참여인원<span class="ss">(최대10명)</span></label>
+        <input type=number name="mem" id="mem" min=0 max=10 default="5" value="1" />
+      </div>
+      <div class="aa">
+        <label>지원물품<span class="ss">(1인당 5개)</span></label>
+        <input type=number name="sup" id="sup" min="0" max="50" step="5" value="1" />
+      </div>
+      <div class="aa">
+        <label>희망 단계<span class="ss">(하,중,상)</span></label>
+        <input type="range" id="level" min="0" max="2" step="1" value="0">
+      </div>
+    </form>
   </div>
 </body>
 </html>

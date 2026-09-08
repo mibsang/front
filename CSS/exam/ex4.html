@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex4.html</title>
+  <style>
+    fieldset {
+      width: 530px;
+      margin-bottom: 20px;
+      border: 1px solid #000;
+    }
+
+    legend {font-weight: bold;}
+
+    .aa {margin: 20px 30px;}
+
+    .ss {font-size: 13px;}
+
+    .aa input[type="text"] {width: 150px;}
+
+    #major {width: 120px;}
+
+    #week, #classTime {
+      width: 160px;
+      height: 25px;
+    }
+
+    #classTime {width: 120px;}
+  </style>
+</head>
+<body>
+  <h1>여름방학 특강 신청</h1>
+  <fieldset>
+    <legend>수강 신청인</legend>
+    <form>
+      <div class="aa">
+        <label>학번</label>
+        <input type="text" name="studentId" id="studentId" />
+      </div>
+      <div class="aa">
+        <label>이름</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div class="aa">
+        <label>학과</label>
+        <select name="major" id="major">
+          <option value="컴퓨터공학과" selected>컴퓨터공학과</option>
+          <option value="전자공학과">전자공학과</option>
+          <option value="경영학과">경영학과</option>
+          <option value="체육교육학과">체육교육학과</option>
+          <option value="국어국문학과">국어국문학과</option>
+          <option value="연극영화과">연극영화과</option>
+        </select>
+      </div>
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend>수강 과목을 선택하세요</legend>
+    <form>
+      <div class="aa">
+        <label>선호색상</label>
+        <input type="color" name="color" id="color" />
+      </div>
+      <div class="aa">
+        <label>신청 과목<span class="ss">(회화)</span></label>
+        <span class="radio-group">
+          <label><input type="radio" name="level" id="level1" value="초급" checked />영어 회화(초급)</label>
+          <label><input type="radio" name="level" id="level2" value="중급" />영어 회화(중급)</label>
+          <label><input type="radio" name="level" id="level3" value="고급" />영어 회화(고급)</label>
+        </span>
+      </div>
+      <div class="aa">
+        <label>신청 과목<span class="ss">(자격)</span></label>
+        <span class="radio-group">
+          <label><input type="radio" name="cert" id="toeic" value="TOEIC" />TOEIC</label>
+          <label><input type="radio" name="cert" id="toefl" value="TOEFL" />TOEFL</label>
+          <label><input type="radio" name="cert" id="opic" value="OPIC" />OPIC</label>
+        </span>
+      </div>
+      <div class="aa">
+        <label>관심분야</label>
+        <span class="check-group">
+          <label><input type="checkbox" name="interest" value="문법" />문법</label>
+          <label><input type="checkbox" name="interest" value="Vocabulary" />Vocabulary</label>
+          <label><input type="checkbox" name="interest" value="회화" />회화</label>
+          <label><input type="checkbox" name="interest" value="리스닝" />리스닝</label>
+          <label><input type="checkbox" name="interest" value="뉴스청취" />뉴스 청취</label>
+          <label><input type="checkbox" name="interest" value="독해" />독해</label>
+        </span>
+      </div>
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend>강의 시간을 선택하세요</legend>
+    <form>
+      <div class="aa">
+        <label>개강 주</label>
+        <select name="week" id="week">
+          <option value="">--. --번째 주</option>
+          <option value="1주차">3월, 1번째 주</option>
+          <option value="2주차">3월, 2번째 주</option>
+          <option value="3주차">3월, 3번째 주</option>
+        </select>
+      </div>
+      <div class="aa">
+        <label>강의 시간</label>
+        <input type="time" name="classTime" id="classTime" step="1800"/>
+      </div>
+    </form>
+  </fieldset>
+</body>
+</html>

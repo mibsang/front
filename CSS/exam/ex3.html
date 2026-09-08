@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex3.html</title>
+  <style>
+    legend{
+      font-weight: bolder;
+    }
+    .aa {
+      width: 520px;
+    }
+    .bb {
+      width: 465px;
+      margin: 20px 0px 20px 40px;
+    }
+    .ss {
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <fieldset class="aa">
+    <legend>수강 과목을 선택하세요 <span class="ss">(1과목 선택 가능)</span></legend>
+    <form>
+      <div class="bb">
+        <label>신청 과목<span class="ss">(회화)</span></label>
+        <input type=radio name="level" id="level1" value="초급"/>영어 회화(초급) 
+        <input type=radio name="level" id="level2" value="중급" />영어 회화(중급) 
+        <input type=radio name="level" id="level3" value="고급" checked/>영어 회화(고급) 
+      </div>
+      <div class="bb">
+        <label>신청 과목<span class="ss">(자격)</span></label>
+        <input type=radio name="TOEIC" id="TOEIC" value="TOEIC" checked />TOEIC 
+        <input type=radio name="TOEFL" id="TOEFL" value="TOEFL" />TOEFL 
+        <input type=radio name="OPIC" id="OPIC" value="OPIC" />OPIC 
+      </div>
+    </form>
+  </fieldset>
+</body>
+</html>
