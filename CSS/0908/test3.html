@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test3.html</title>
+</head>
+<body>
+  <h2>연습</h2>
+  <p>작업진행상태 : 
+    <progress max="100" value="30"></progress>
+  </p>
+  <p>사용량(트래픽스)
+    <meter max="1000" min="100" low="200" high="800" value="700"></meter>
+  </p>
+  <p>
+    그린대학교
+    <select name="hakkwa" id="hakkwa">
+      <optgroup label="공과대학">
+        <option value="">기계공학과</option>
+        <option value="">컴퓨터공학과</option>
+        <option value="">토목공학과</option>
+        <option value="">반도체공학과</option>
+        <option value="">전자공학과</option>
+      </optgroup>
+      <optgroup label="어문계열">
+        <option value="">영문학과</option>
+        <option value="">독문학과</option>
+      </optgroup>
+      <optgroup label="자연과학">
+        <option value="">화학과</option>
+        <option value="">물리과</option>
+      </optgroup>
+    </select>
+  </p>
+  <p>
+    대학명 :
+    <input type="text" name="ac" id="ac" list="choices" required />
+    <datalist id="choices">
+      <option>서울대학교</option>
+      <option>충북대학교</option>
+      <option>연세대학교</option>
+      <option>고려대학교</option>
+      <option>서강대학교</option>
+      <option>청주대학교</option>
+      <option>충남대학교</option>
+      <option>경희대학교</option>
+    </datalist>
+  </p>
+</body>
+</html>

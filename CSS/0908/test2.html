@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test2.html</title>
+  <style>
+    .container {
+      width: 400px;
+      height: 350px;
+      border: 1px solid gray;
+      line-height: 40px;
+      background-color: #eee;
+      padding: 10px 30px;
+      text-align: center;
+    }
+    
+    .aa, .cc {
+      display: inline-block;
+      width: 60px;
+      /* background-color: aqua; */
+    }
+
+    .aa {
+      text-align: left;
+    }
+    
+    .cc {
+      width: 200px;
+    }
+    
+    input[type="text"], input[type="password"] {
+      background-color: beige;
+      color: brown;
+      font-size: 12pt;
+      padding: 5px;
+      margin: 10px;
+    }
+
+    /* 
+    input[type="password"] {
+      background-color: aquamarine;
+      font-size: 12pt;
+      padding: 5px;
+      margin: 10px;
+    }
+    */
+
+    button {
+      padding: 7px;
+      margin: 5px;
+    }
+
+    .bb:hover {
+      background-color: #ddd;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 style="text-align: center;">form 태그 스타일 연습</h2>
+    <form>
+      <div>
+        <label for="mid" class="aa">아이디</label>
+        <input type="text" name="mid" id="mid" class="cc" placeholder="아이디를 입력하세요." required autofocus />
+      </div>
+      <div>
+        <label for="pwd" class="aa">비밀번호</label>
+        <input type="password" name="pwd" id="pwd" class="cc" placeholder="비밀번호를 입력하세요." required />
+      </div>
+      <div>
+        <label for="name" class="aa">성명</label>
+        <input type="text" name="name" id="name" class="cc" placeholder="성명을 입력하세요." required />
+      </div>
+      <div>
+        <label for="sosok" class="aa">소속</label>
+        <input type="text" name="sosok" id="sosok" class="cc" value="그린컴퓨터" readonly />
+      </div>
+      <div style="text-align: center;">
+        <!-- <input type="button" value="로그인" /> -->
+        <button type="submit" class="bb">로그인</button>
+        <button type="reset" class="bb">다시입력</button>
+        <button type="button" class="bb">회원가입</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
