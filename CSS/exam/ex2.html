@@ -4,101 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ex1.html</title>
-
   <style>
-    .aa {
-      margin: 10px;
-      width: 400px;
-      padding: 7px;
-    }
 
-    .bb {
-      margin: 2px;
-      text-align: center;
-    }
-
-    .aa legend {
-      color: blue;
-    }
-
-    /* 가입하기 영역의 라벨 정렬 */
-    .bb label {
-      display: inline-block;
-      width: 100px;
-      text-align: left;
-    }
-
-    /* 가입하기 영역의 입력창 */
-    .bb input {
-      margin: 7px;
-      width: 180px;
-      height: 25px;
-      box-sizing: border-box;
-    }
-
-    /* 로그인 입력창 */
-    #mid, #pwd {
-      width: 100px;
-    }
-
-    /* 필수 입력 표시 */
-    .bb span {
-      color: red;
-    }
-
-    .btbt {
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
   <div>
-    <form>
-      <!-- 로그인 -->
-      <fieldset class="aa">
-        <legend>로그인</legend>
-        <label for="mid" class="bb">아이디</label>
-        <input type="text" name="mid" id="mid" required autofocus>
-        <label for="pwd" class="bb">비밀번호</label>
-        <input type="password" name="pwd" id="pwd" required>
-        <button type="submit" class="bb">로그인</button>
-      </fieldset>
-      <!-- 가입하기 -->
-      <fieldset class="aa">
-        <legend>가입하기</legend>
-        <div class="bb">
-          <label for="nmid">아이디 <span>*</span></label>
-          <input type="text" name="nmid" id="nmid" value="아이디를 입력해주세요." required>
-        </div>
-        <div class="bb">
-          <label for="npwd1">비밀번호 <span>*</span></label>
-          <input type="password" name="npwd1" id="npwd1" placeholder="비밀번호를 입력해주세요." required>
-        </div>
-        <div class="bb">
-          <label for="npwd2">비밀번호 확인 <span>*</span></label>
-          <input type="password" name="npwd2" id="npwd2" placeholder="비밀번호를 다시 입력해주세요." required>
-        </div>
-        <div class="bb">
-          <label for="nname">이름 <span>*</span></label>
-          <input type="text" name="nname" id="nname" placeholder="이름을 입력해주세요." required>
-        </div>
-        <div class="bb">
-          <label for="nmail">메일 주소 <span>*</span></label>
-          <input type="email" name="nmail" id="nmail" placeholder="이메일 형식에 맞게 입력해주세요." required>
-        </div>
-        <div class="bb">
-          <label for="ntel">전화번호</label>
-          <input type="tel" name="ntel" id="ntel" placeholder="전화번호를 입력해주세요.">
-        </div>
-      </fieldset>
-      <!-- 가입하기 / 다시쓰기 버튼 -->
-      <fieldset class="aa">
-        <div class="bb">
-          <button type="submit" class="btbt">가입하기</button>
-          <button type="reset" class="btbt">다시쓰기</button>
-        </div>
-      </fieldset>
-    </form>
+    <h3>등록정보</h3>
+    <div>
+      <p>참여인원(최대10명)</p>
+      <p>참여인원(최대10명)</p>
+      <p>참여인원(최대10명)</p>
+    </div>
   </div>
 </body>
 </html>
