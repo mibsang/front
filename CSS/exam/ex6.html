@@ -7,6 +7,8 @@
   <style>
     form {
       width: 450px;
+      display: inline-block;
+      text-align: left;
     }
     legend {
       font-weight: bold;
@@ -19,9 +21,6 @@
     .btbt {
       cursor: pointer;
     }
-    
-
-
     .aa {
       margin-bottom: 20px ;
       font-size: 14px;
@@ -31,9 +30,16 @@
     }
     .bb label {
       font-weight: bold;
+      display: inline-block;
+      width: 70px;         
+      vertical-align: top;
     }
     .cc {
       margin: 10px 25px;
+    }
+    .cc label {
+      display: inline-block;
+      width: 230px;      
     }
   </style>
 </head>
@@ -67,7 +73,7 @@
           </div>
           <div class="bb">
             <label for="memo">메 모</label>
-            <textarea rows=3 cols=35 name="content" id="content" placeholder="자기소개를 입력하세요"></textarea>
+            <textarea rows=3 cols=35 name="memo" id="memo"></textarea>
           </div>
         </div> 
       </fieldset>

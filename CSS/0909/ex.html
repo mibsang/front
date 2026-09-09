@@ -3,51 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>test17.html</title>
+  <title>ex.html</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <style>
-    html {scroll-behavior: smooth;}
-    body {
-      margin: 0px;
-      padding: 0px;
-    }
-    ul {
-      list-style-type: none;
-      margin: 0px;
-      padding: 0px;
-      background-color: #333;
-      overflow: hidden;
-      position: sticky;
-      top: 0px;
-    }
-    li {
-      float: left;
-    }
-    li a {
-      display: block;
-      padding: 14px 16px;
-      color: #fff;
-      text-align: center;
-      text-decoration: none;
-    }
-    li a:hover {
-      background-color: #111;
-    }
-    .active {
-      background-color: #04aa6d;
-    }
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 40px 0px 0px 30px;
+    background-color: #fff;
+    overflow: hidden;
+    position: sticky;
+    top: 0px;
+  }
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    padding: 40px 16px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: #1e1f1e;
+    color: rgb(9, 132, 9);
+    text-decoration: underline;
+  }
+  .active {
+    background-color: #04aa6d;
+  }
+  footer {
+    background-color: #1e1e1e;
+    color: #aaa;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 13px;
+    margin-top: 60px;
+  }
   </style>
 </head>
 <body>
-  <span id="home"></span>
-  <ul>
-    <li><a href="#home" class="active">Home</a></li>
-    <li><a href="#notice">Notice</a></li>
-    <li><a href="#guest">Guest</a></li>
-    <li><a href="#board">Board</a></li>
-    <li><a href="#pds">PDS</a></li>
-    <li style="float: right;"><a href="#about" class="active">About</a></li>
-  </ul>
-  
+  <div>
+    <span><a href="#"><img src="../../Images/starbucks.png" width="50px"></a></span>
+  </div>
+  <div>
+    <ul>
+      <li><a href="#">COFFEE</a></li>
+      <li><a href="#">MENU</a></li>
+      <li><a href="#">STORE</a></li>
+      <li><a href="#">ESG</a></li>
+      <li><a href="#">STARBUCKS REWARDS</a></li>
+      <li><a href="#">CORPORATE SALES</a></li>
+      <li><a href="#">WHAT'S NEWS</a></li>
+    </ul>
+  </div>
   <div style="padding: 1px 16px; clear: both;">
     <h2>Fixed Full-height Side Nav(Sticky Navigation)</h2>
     <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
@@ -288,5 +304,9 @@
     <p>Some text..</p>
     <p>Some text..</p>
   </div>
+  <footer>
+    <p>STARBUCKS HOMEPAGE UI (연습용 페이지)</p>
+  </footer>
+
 </body>
 </html>
