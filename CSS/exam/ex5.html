@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex5.html</title>
+  <style>
+    h1 {
+      margin: 0px;
+    }
+    .aa {
+      margin-bottom: 20px ;
+      font-size: 14px;
+    }
+    .bb, .cc {
+      margin: 15px;
+    }
+    .cc {
+      text-align: center;
+    }
+    .btbt {
+      cursor: pointer;
+    }
+    form {
+      width: 340px;
+    }
+    legend {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>특강 신청</h1>
+  <div>
+    <form>
+      <!-- 수강과목 -->
+      <fieldset class="aa" style="padding: 25px;">
+        <legend>수강과목</legend>
+        <div style="text-align: center;">
+          <label for="time" style="margin: 10px;">영어회화(초급)</label>
+          <input type="text" name="time" id="time" value="오전 9:00~11:00">
+        </div>
+      </fieldset>
+      <!-- 신청자 -->
+      <fieldset class="aa">
+        <legend>신청자</legend>
+        <div style="text-align: right;"> 
+          <div class="bb">
+            <label for="name" style="margin: 10px;">이름</label>
+            <input type="text" name="name" id="name">
+          </div>
+          <div class="bb">
+            <label for="number" style="margin: 10px;">학번</label>
+            <input type="text" name="number" id="number" placeholder="하이픈 없이 입력해주세요">
+          </div>
+          <div class="bb">
+            <label for="major" style="margin: 10px;">학과</label>
+            <select name="major" id="major" style="width: 145px;">
+              <option selected>--</option>
+              <option value="컴퓨터공학과">컴퓨터공학과</option>
+              <option value="전자공학과">전자공학과</option>
+              <option value="경영학과">경영학과</option>
+              <option value="체육교육학과">체육교육학과</option>
+              <option value="국어국문학과">국어국문학과</option>
+              <option value="연극영화과">연극영화과</option>
+            </select>
+          </div>
+          <div class="bb">
+            <label for="tel" style="margin: 10px;">연락처</label>
+            <input type="tel" name="tel" id="tel">
+          </div>
+        </div> 
+      </fieldset>
+      <!-- 교재 주문 -->
+      <fieldset class="aa">
+        <legend>교재 주문</legend>
+        <div>
+          <div class="cc">
+            <label for="textbook" style="margin: 10px;">교재</label>
+            <input type=number name="textbook" id="textbook" value="3" style="width: 40px;">
+          </div>
+          <div class="cc">
+            <label for="work" style="margin: 10px;">워크시트</label>
+            <input type=number name="work" id="work" value="3" style="width: 40px;"/>
+          </div>
+          <div class="cc">
+            <label for="Bulk" style="margin: 10px;">단체주문</label>
+            <input type=number name="Bulk" id="Bulk" value="100" style="width: 50px;" />
+          </div>
+        </div>
+      </fieldset>
+      <!-- 신청하기 / 다시쓰기 버튼 -->
+      <fieldset class="aa">
+        <div style="text-align: center;">
+          <button type="submit" class="btbt">신청하기</button>
+          <button type="reset" class="btbt">다시쓰기</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

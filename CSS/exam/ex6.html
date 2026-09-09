@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex6.html</title>
+  <style>
+    form {
+      width: 450px;
+    }
+    legend {
+      font-weight: bold;
+      color: darkmagenta;
+      font-size: 18px;
+    }
+    fieldset {
+      border: 2px solid #000;
+    }
+    .btbt {
+      cursor: pointer;
+    }
+    
+
+
+    .aa {
+      margin-bottom: 20px ;
+      font-size: 14px;
+    }
+    .bb {
+      margin: 15px;
+    }
+    .bb label {
+      font-weight: bold;
+    }
+    .cc {
+      margin: 10px 25px;
+    }
+  </style>
+</head>
+<body>
+  <h1>상품 주문서</h1>
+  <div>
+    <form>
+      <!-- 개인정보 -->
+      <fieldset class="aa">
+        <legend>개인 정보</legend>
+          <div class="bb">
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name" placeholder="여백없이 입력">
+          </div>
+          <div class="bb">
+            <label for="tel1">연락처</label>
+            <input type="tel" name="tel1" id="tel1" placeholder="연락가능한 번호">
+          </div>
+      </fieldset>
+      <!-- 배송지정보 -->
+      <fieldset class="aa">
+        <legend>배송지 정보</legend>
+        <div> 
+          <div class="bb">
+            <label for="address">주소</label>
+            <input type="text" name="address" id="address" style="width: 300px;">
+          </div>
+          <div class="bb">
+            <label for="tel2">전화번호</label>
+            <input type="tel" name="tel2" id="tel2">
+          </div>
+          <div class="bb">
+            <label for="memo">메 모</label>
+            <textarea rows=3 cols=35 name="content" id="content" placeholder="자기소개를 입력하세요"></textarea>
+          </div>
+        </div> 
+      </fieldset>
+      <!-- 주문 정보 -->
+      <fieldset class="aa">
+        <legend>주문 정보</legend>
+        <div>
+          <div class="cc">
+            <label><input type="checkbox" name="coffee" value="안티" />과테말라 안티구아 (100g)</label>
+            <input type=number name="quantity" id="quantity1" value="0" style="width: 40px;">개
+          </div>
+          <div class="cc">
+            <label><input type="checkbox" name="coffee" value="만델" />인도네시아 만델링 (100g)</label>
+            <input type=number name="quantity" id="quantity2" value="0" style="width: 40px;">개
+          </div>
+          <div class="cc">
+            <label><input type="checkbox" name="coffee" value="탐라" />탐라는도다(블렌딩) (100g)</label>
+            <input type=number name="quantity" id="quantity3" value="0" style="width: 40px;">개
+        </div>
+      </fieldset>
+      <!-- 주문하기 / 다시작성 버튼 -->
+      <div style="text-align: center;">
+        <button type="submit" class="btbt">주문하기</button>
+        <button type="reset" class="btbt">다시 작성</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
