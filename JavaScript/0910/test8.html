@@ -10,15 +10,42 @@
   <script>
     'use strict';
     
+    // atom();
 
+    function atom1() {
+      alert("안녕하세요");
+    }
+
+    function atom2(su) {
+      alert("안녕하세요 : " + su);
+    }
+
+    function atom3(su) {
+      alert("함수를 호출합니다 : " + su);
+      result(su, 2)
+    }
     
+    function result(su1, su2) {
+      let res = su1 * su2;
+      console.log(res);
+      document.getElementById("demo").innerText = res;
+    }
+
   </script>
 </head>
 <body>
 <p><br></p>
 <div class="container">
-  <h2>함수 호출</h2>
-
+  <h2 class="mb-5">함수 호출</h2>
+  <p>
+    <input type="button" value="호출" onclick="atom1()" class="btn btn-success">
+    <input type="button" value="호출" onclick="atom2(1234)" class="btn btn-primary">
+    <input type="button" value="호출" onclick="atom3(500)" class="btn btn-secondary">
+    <input type="button" value="호출" onclick="result(500, 3)" class="btn btn-info">
+  </p>
+  <p>
+    <div id="demo"></div>
+  </p>
 </div>
 </body>
 </html>
