@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test4.html</title>
+  <script>
+    'use strict';
+
+    var su1 = 100;
+    document.write("안녕 + " + su1)
+
+    // btom();
+
+    function atom() {
+      console.log("su1 : " + su1);
+      console.log("atom 함수 호출 종료");
+    }
+    atom();
+    console.log("\n");
+
+    // btom();
+    document.write("\n")
+    
+    // function btom() {
+    //   console.log("su1 : " + su1);
+    //   console.log("btom 함수 호출 종료");
+    // }
+    // btom();
+  </script>
+</head>
+<body>
+  <h2>함수 호출</h2>
+  <input type="button" value="btom호출" />
+  <script>
+    function btom() {
+      document.write("안녕!<br>");
+    }
+  </script>
+</body>
+</html>
