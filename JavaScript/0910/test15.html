@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test15.html</title>
+  <link rel="icon" href="data:,">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+     
+    
+    let temp = '0';
+    function fCheck2() {
+      // 입력받은 값을 누적처리
+      let no = su2.value;
+
+      if(no.trim() === "") {
+        alert("내용을 입력하세요")
+        return false;
+      }
+      
+      temp = String(parseInt(temp) + parseInt(no));
+      
+      demo.innerText = "입력받은 값은" + no + ", 누적된 값은" + temp + "입니다";
+      
+      su2.value = '';
+      su2.focus();
+    }
+    
+    
+</script>
+</head>
+<body>
+<p><br></p>
+<div class="container">
+  <h2>입력된 값의 출력</h2>
+  <hr>
+  <div class="input-group mb-3">
+    <div class="input-group-text bg-secondary-subtle">2.값을 입력하세요</div>
+    <input type="text" name="su" id="su2" class="form-control" placeholder="값을 입력하세요">
+    <input type="button" value="값출력(누적)" onclick="fCheck2()" class="btn btn-success">
+  </div>
+  <hr>
+  <div id="demo"></div>
+  <script>
+    const keyField = document.querySelector("#su2");
+    // const keyField = document.getElementById("su2");
+    
+    keyField.addEventListener('keydown', (e) => {
+      // 한글 입력시에 엔터가 두번 입력되는 현상에 대한 처리
+      if(e.isComposing) return;
+
+      if(e.key === 'Enter') {
+        demo.innerText = keyField.value;
+        fCheck2()
+      }
+    });
+  </script>
+</div>
+</body>
+</html>

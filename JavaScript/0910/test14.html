@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test14.html</title>
+  <link rel="icon" href="data:,">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+    let ans = '0';
+
+    function fCheck1() {
+      // 입력받은 값이 문자인지 숫자인지 판별하시오
+      if(isNaN(su1.value)) ans = "문자입니다";
+      else ans = "숫자입니다";
+      
+      demo.innerText = ans;
+    }
+
+    function fCheck2() {
+      // 입력받은 값을 누적처리
+      
+      ans = String(parseInt(ans) + parseInt(su2.value));
+      
+      demo.innerText = "입력받은 값은" + su2.value + ", 누적된 값은" + ans + "입니다";
+
+      su2.value = '';
+      su2.focus();
+    }
+    
+    
+</script>
+</head>
+<body>
+<p><br></p>
+<div class="container">
+  <h2>입력된 값의 출력</h2>
+  <hr>
+  <div class="input-group mb-3">
+    <div class="input-group-text bg-secondary-subtle">1.값을 입력하세요</div>
+    <input type="text" name="su" id="su1" class="form-control" placeholder="값을 입력하세요" autofocus>
+    <input type="button" value="값출력" onclick="fCheck1()" class="btn btn-success">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-text bg-secondary-subtle">2.값을 입력하세요</div>
+    <input type="text" name="su" id="su2" class="form-control" placeholder="값을 입력하세요">
+    <input type="button" value="값출력(누적)" onclick="fCheck2()" class="btn btn-success">
+  </div>
+  <hr>
+  <div id="demo"></div>
+  
+</div>
+</body>
+</html>
