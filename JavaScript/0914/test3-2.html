@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test3-2.html</title>
+  <link rel="icon" href="data:,">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+    
+    function fCheck() {
+      let name = document.myform.name.value;
+      let mid = document.myform.mid.value;
+      let pwd = document.myform.pwd.value;
+      let age = document.myform.age.value;
+      let gender = document.myform.gender.value;
+      // let hobby = document.getElementById("hobby").value;
+      let job = document.myform.job.value;
+      // let card = document.getElementById("card").value;
+      let content = document.myform.content.value;
+      let fName = document.myform.fName.value;
+
+      let hobby = '';
+      // if(document.getElementById("hobby1").checked) hobby += document.getElementById("hobby1").value + " / ";
+      // if(document.getElementById("hobby2").checked) hobby += document.getElementById("hobby2").value + " / ";
+      // if(document.getElementById("hobby3").checked) hobby += document.getElementById("hobby3").value + " / ";
+      // if(document.getElementById("hobby4").checked) hobby += document.getElementById("hobby4").value + " / ";
+      // if(document.getElementById("hobby5").checked) hobby += document.getElementById("hobby5").value + " / ";
+      // if(document.getElementById("hobby6").checked) hobby += document.getElementById("hobby6").value + " / ";
+      // if(document.getElementById("hobby7").checked) hobby += document.getElementById("hobby7").value + " / ";
+      for(let i=1; i<=7; i++) {
+        console.log("결과 : ", document.getElementById("hobby"+i).checked);
+        if(document.getElementById("hobby"+i).checked) hobby += document.getElementById("hobby"+i).value + " / ";
+      }
+      hobby = hobby.substring(0, (hobby.length-2));
+      
+      let card = '';
+      // if(document.getElementById("card").options[0].selected) card += document.getElementById("card").options[0].value + " / ";
+      // if(document.getElementById("card").options[1].selected) card += document.getElementById("card").options[1].value + " / ";
+      // if(document.getElementById("card").options[2].selected) card += document.getElementById("card").options[2].value + " / ";
+      // if(document.getElementById("card").options[3].selected) card += document.getElementById("card").options[3].value + " / ";
+      // if(document.getElementById("card").options[4].selected) card += document.getElementById("card").options[4].value + " / ";
+      // if(document.getElementById("card").options[5].selected) card += document.getElementById("card").options[5].value + " / ";
+      // if(document.getElementById("card").options[6].selected) card += document.getElementById("card").options[6].value + " / ";
+      // if(document.getElementById("card").options[7].selected) card += document.getElementById("card").options[7].value + " / ";
+      
+      for(let i=0; i<8; i++) {
+      if(document.getElementById("card").options[i].selected) card += document.getElementById("card").options[i].value + " / ";
+      }
+      card = card.substring(0, (card.length-2));
+      
+      if(name.trim() == '') {
+        alert("성명을 입력하세요");
+        document.getElementById("name").focus;
+      }
+      else if(mid.trim() == '') {
+        alert("아이디를 입력하세요");
+        document.getElementById("mid").focus;
+      }
+      else if(pwd.trim() == '') {
+        alert("비밀번호를 입력하세요");
+        document.getElementById("pwd").focus;
+      }
+      else if(age.trim() == '') {
+        alert("나이를 입력하세요");
+        document.getElementById("age").focus;
+      }
+      else if(content.trim() == '') {
+        alert("자기소개서를 입력하세요");
+        document.getElementById("content").focus;
+      }
+      else if(fName.trim() == '') {
+        alert("파일을 첨부해주세요");
+        document.getElementById("fName").focus;
+      }
+      else {
+        alert("자료를 전송합니다")
+        let str = "<hr>결과<br>";
+        str += "성명 : " + name + "<br>";
+        str += "아이디 : " + mid + "<br>";
+        str += "비밀번호 : " + pwd + "<br>";
+        str += "나이 : " + age + "<br>";
+        str += "성별 : " + gender + "<br>";
+        str += "취미 : " + hobby + "<br>";
+        str += "직업 : " + job + "<br>";
+        str += "카드 : " + card + "<br>";
+        str += "자기소개 : " + content + "<br>";
+        str += "사진 : " + fName+ "<br>";
+
+        demo.innerHTML = str;
+      }
+    }
+    
+    
+</script>
+</head>
+<body>
+<p><br></p>
+<div class="container">
+  <h2>폼 태그 체크</h2>
+  <form name="myform" method="post" class="text-center">
+    <div class="input-group mb-2">
+      <div class="input-group-text"><label for="name">성명</label></div>
+      <input type="text" name="name" id="name" class="form-control" placeholder="성명을 입력하세요" autofocus required>
+    </div>
+    <div class="input-group mb-2">
+      <div class="input-group-text"><label for="mid">아이디</label></div>
+      <input type="text" name="mid" id="mid" class="form-control" placeholder="아이디를 입력하세요" required>
+    </div>
+    <div class="input-group mb-2">
+      <div class="input-group-text"><label for="pwd">비밀번호</label></div>
+      <input type="password" name="pwd" id="pwd" class="form-control" placeholder="비밀번호를 입력하세요" required>
+    </div>
+    <div class="input-group mb-2">
+      <div class="input-group-text"><label for="age">나이</label></div>
+      <input type="number" name="age" id="age" value="1" min="1" max="100" class="form-control">
+    </div>
+    <div class="input-group mb-2">
+      <div class="input-group-text me-3"><label for="gender">성별</label></div>  <!--라디오-->
+      <div class="form-check">
+        <input type="radio" name="gender" id="gender" value="여자" class="me-1" checked>여자
+        <input type="radio" name="gender" id="gender" value="남자" class="ms-3 me-1">남자
+      </div>
+    </div>
+    <div class="input-group mb-2">
+      <div class="input-group-text me-2"><label for="hobby1">취미</label></div> <!--체크박스-->
+      <input type="checkbox" name="hobby" id="hobby1" value="등산" class="me-1" checked>등산 &nbsp;
+      <input type="checkbox" name="hobby" id="hobby2" value="낚시" class="me-1">낚시 &nbsp;
+      <input type="checkbox" name="hobby" id="hobby3" value="축구" class="me-1">축구 &nbsp;
+      <input type="checkbox" name="hobby" id="hobby4" value="농구" class="me-1">농구 &nbsp;
+      <input type="checkbox" name="hobby" id="hobby5" value="야구" class="me-1">야구 &nbsp;
+      <input type="checkbox" name="hobby" id="hobby6" value="수영" class="me-1">수영 &nbsp;
+      <input type="checkbox" name="hobby" id="hobby7" value="기타" class="me-1">기타 &nbsp;
+    </div>
+    <div class="input-group mb-2">
+      <div class="input-group-text"><label for="job">직업</label></div> <!--콤보박스-->
+      <select name="job" id="job" class="form-select">
+        <option value="의사" selected>의사</option>
+        <option value="변호사">변호사</option>
+        <option value="판사">판사</option>
+        <option value="검사">검사</option>
+        <option value="운전기사">운전기사</option>
+      </select>
+    </div>
+    <div class="input-group mb-2">
+      <div class="input-group-text"><label for="card">소지한카드</label></div> <!--리스트박스-->
+      <select name="card" id="card" size="4" multiple class="form-select">
+        <option value="신한카드">신한카드</option>
+        <option value="롯데카드">롯데카드</option>
+        <option value="현대카드">현대카드</option>
+        <option value="국민카드">국민카드</option>
+        <option value="우리카드">우리카드</option>
+        <option value="우리카드">삼성카드</option>
+        <option value="우리카드">농협카드</option>
+        <option value="우리카드">BC카드</option>
+      </select>
+    </div>
+    <div class="input-group mb-2">
+      <div class="input-group-text"><label for="content">자기소개</label></div> <!--텍스트에어리어-->
+      <textarea rows="5" name="content" id="content" class="form-control" placeholder="자기소개서를 입력하세요"></textarea>
+    </div>
+    <div class="input-group mb-2">
+      <!-- <div class="input-group-text"><label for="fName">첨부파일</label></div> -->
+      <input type="file" name="fName" id="fName" class="form-control">
+    </div>
+    <div class="text-center mt-4">
+      <input type="button" value="전송" onclick="fCheck()" class="btn btn-success">
+      <input type="button" value="돌아가기" onclick="history.back()" class="btn btn-warning">
+      <input type="reset" value="취소" class="btn btn-danger">
+    </div>
+  </form>
+  <div id="demo"></div>
+  <p><br></p>
+</div>
+</body>
+</html>
