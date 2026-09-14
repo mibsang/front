@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test7.html</title>
+  <script>
+    'use strict';
+
+    // length, substring(), indexOf(), slice(), concat(), trim(), replace(), toLowerCase(), toUpperCase(), charAt(), split(), join(), charCodeAt();
+
+    let text1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    let text2 = "  ABC    BC    ANS GHI JAASDF... A bC BC .... CD .?? ";
+
+    let str = '';
+
+    str += text1 + '\n';
+    str += text2 + '\n';
+    
+    console.log(str);
+
+    str = text1.substring(5);
+    console.log(str);
+    console.log('');
+
+    str = text1.substring(5, 10);
+    console.log(str);
+
+    console.log(text1.indexOf('*'));
+    console.log(text1.indexOf('Z'));
+    console.log(text2.indexOf('A',10)); // 10번지 이후부터 있는 'A'의 위치를 검색
+
+    console.log(text1.slice(5));
+    console.log(text1.substring(5));
+
+    console.log(text1.concat(text2));
+
+    console.log(text1.replace('ABC','opq'));
+
+    console.log(text2.trim());
+
+    console.log(text2.replace(' ','')); // java와 달리 하나만 바꿈
+    console.log(text2.replaceAll(' ','')); // java와 달리 전체를 다 바꾸려면 replaceAll()
+
+    console.log(text1.charAt(5));
+
+    for(let i=0; i<text1.length; i++) {
+      console.log(text1.charAt(i));
+    }
+
+    console.clear();
+
+    let strs = text2.split(" ");
+    for(let str of strs) {
+      console.log(str);
+    }
+    console.log('');
+
+    console.log(text1.charCodeAt(5));
+
+  </script>
+</head>
+<body>
+  <h2>문자열 함수 연습</h2>
+</body>
+</html>

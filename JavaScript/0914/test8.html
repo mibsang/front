@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test8.html</title>
+  <script>
+    'use strict'
+
+    // max, min, ceil, floor, trunc, pow, abs, sqrt, fixed, random
+    let su1 = 10;
+    let su2 = -20;
+    let su3 = 3.14;
+    let su4 = -3.14;
+
+    console.log(Math.max(su1, su2, su3, su4));
+    console.log(Math.min(su1, su2, su3, su4));
+
+    console.log(Math.ceil(su3));
+    console.log(Math.floor(su3));
+    console.log(Math.ceil(su4));
+    console.log(Math.floor(su4));
+
+    console.log(Math.trunc(su3));
+    console.log(Math.pow(2,5)); // 2를 5법 제곱
+    console.log(Math.abs(su4)); // 절대값
+    console.log(Math.sqrt(25)); // 루트
+
+    console.log(su3.toFixed(0)); // 반올림
+
+    console.clear();
+    console.log(Math.random()); // 0 <= x <1 의 실수값
+    console.log(Math.random()*10);   
+    console.log(parseInt(Math.random()*10));   
+    console.log(parseInt(Math.random()*10)+1); 
+    
+    console.log(parseInt(Math.random()*(15-5+1))+5); // 5부터 15까지의 난수
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
