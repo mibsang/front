@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test10.html</title>
+  <link rel="icon" href="data:,">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+    
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth()+1;
+    const date = today.getDate();
+    
+    window.onload = function() {
+      let yymmdd = year + "-" + month + "-" + date;
+      demo.innerHTML = yymmdd;
+      let str = "";
+      for(let i=2027; i>=2000; i--) {
+        if(year == i) str += '<option selected>' + i + '</option>';
+        else str += '<option>' + i + '</option>';
+      }
+      yy.innerHTML = str;
+      
+      str = "";
+      for(let i=1; i<=12; i++) {
+        if(month == i) str += '<option selected>' + i + '</option>';
+        else str += '<option>' + i + '</option>';
+      }
+      mm.innerHTML = str;
+
+      dd.innerHTML = '<option>' + date + '</option>';
+      
+      // str = "";  // 잘못된 방법
+      // for(let i=1; i<=31; i++) {
+      //   str += '<option>' + i + '</option>';
+      // }
+      // dd.innerHTML = str;
+    }
+    
+    function todayCheck() {
+      let str = "";
+      for(let i=2027; i>=2000; i--) {
+        if(year == i) str += '<option selected>' + i + '</option>';
+        else str += '<option>' + i + '</option>';
+      }
+      yy.innerHTML = str;
+      
+      str = "";
+      for(let i=1; i<=12; i++) {
+        if(month == i) str += '<option selected>' + i + '</option>';
+        else str += '<option>' + i + '</option>';
+      }
+      mm.innerHTML = str;
+
+      dd.innerHTML = '<option>' + date + '</option>';
+      
+      document.getElementById("yy2").value = year;
+      document.getElementById("mm2").value = month;
+      document.getElementById("dd2").value = date;
+    }
+    
+    function ddCheck() {
+      
+      let yy = document.getElementById("yy").value;
+      let mm = document.getElementById("mm").value;
+      let lastDate = new Date(yy, mm, 0).getDate();
+
+      let str = "";
+      for(let i=1; i<=lastDate; i++) {
+        str += '<option>' + i + '</option>';
+      }
+      dd.innerHTML = str;
+    }
+</script>
+</head>
+<body>
+<p><br></p>
+<div class="container">
+  <h2>날짜 연산</h2>
+  <form name="dateForm">
+    <p>오늘 날짜 : 
+      <span id="demo"></span>
+    </p>
+    <hr>
+    <p>
+      콤보상자에 오늘 날짜를 출력시켜보자 ➔ <button type="button" onclick="todayCheck()" class="btn btn-success ms-2">오늘날짜</button>
+    </p>
+    <div class="mb-3">
+      <select name="yy" id="yy"></select>-
+      <select name="mm" id="mm"></select>-
+      <select name="dd" id="dd" onclick="ddCheck()"></select>
+    </div>
+    <div>
+      <input type="number" name="yy2" id="yy2" style="width: 70px;">-
+      <input type="number" name="mm2" id="mm2" style="width: 40px;">-
+      <input type="number" name="dd2" id="dd2" style="width: 40px;">
+    </div>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test11.html</title>
+  <link rel="icon" href="data:,">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+    
+    function regexCheck() {
+      const regex1 = /atom/gm;
+      const regex2 = /mbc|kbs|sbs|cjb/g;
+      const regex3 = /홍길(동|순)/g;
+      const regex4 = /[a-z]/g;
+
+      let content = document.getElementById("content").value.trim();
+
+      if(content == "") {
+        alert("내용을 입력하세요")
+        document.getElementById("content").focus();
+        document.getElementById("content").select();
+        return false;
+      }
+
+      // 정규식을 이용한 문서 체크
+      // if(!content.match(regex1)) alert("본문에 atom 문자열을 포함하고 있지 않습니다.")
+      // if(!content.match(regex2)) alert("본문에 mbc, kbs, sbs, cjb 문자열을 포함하고 있지 않습니다.")
+      // if(!content.match(regex3)) alert("본문에 홍길동 또는 홍길순 문자열을 포함하고 있지 않습니다.")
+      if(!regex4.test(content)) alert("영문(소문자)를 포함하고있지 않습니다")
+      
+      else alert("정상적으로 처리 되었습니다.")
+    }
+    
+</script>
+</head>
+<body>
+<p><br></p>
+<div class="container">
+  <h2>정규식 연습(사용법JavaScript/0914/test0.html)</h2>
+  <h2>정규식(Regular Expression)</h2>
+  <form name="myform" method="post">
+    <div>
+      <p><input type="text" name="content" id="content" autofocus required  class="form-control"/></p>
+      <!-- <p><textarea rows="6" name="content" id="content" class="form-control"></textarea></p> -->
+      <p><input type="button" value="정규식체크" onclick="regexCheck()" class="btn btn-success form-control" /></p>
+    </div>
+  </form>
+  <hr/>
+  <p><b>Front에서 Server로의 값을 전송(Form태그 사용)할시에는 사용자 값을 입력후 반드시 '유효성 검사'를 거쳐야 한다.</b></p>
+  <hr/>
+
+  <pre>
+    형식 : /~~~~~/플러그인 , /[~~~~~]/플러그인 ,       자바 : ^[~~~~]*$
+    플러그인(플래그) :
+      g(global) : 전체범위(문자열내의 모든 패턴 검색)에서의 처리(기본)
+        예) str.match(/a/); - 최초에 발견된 문자만 반환
+            str.match(/a/g) - 모든 문자에서 검색후 결과를 배열로 반환
+      m(multi line) : 여러줄에 걸쳐서 처리(textarea 태그)
+      s(single line) : 한줄에서의 처리(기본값) - 개행문자(\n)도 포함해서 처리한다.
+      i : 영문자인경우 대/소문자를 구별하지 않는다.
+      u(unicode) : 유니코드에 대한 구별처리시 사용
+
+      정규식을 실행하기위해서 사용되는 함수?
+        1. 사용자입력문자열.match(정규표현식 or 정규표현식담은변수) : 포함유무에 대한 비교시에 사용할때 편리함.
+        2. 정규표현식변수.test(사용자입력문자열) : 구체적인 문자(열)간의 비교 체크시에 사용하면 편리함.
+
+====================================================================================================
+메서드                                          의미
+====================================================================================================
+("문자열").match(/정규표현식/플래그)              "문자열"에서 "정규표현식"에 매칭되는 항목들을 배열로 반환
+----------------------------------------------------------------------------------------------------
+("문자열").replace(/정규표현식/, "대체문자열")      "정규표현식"에 매칭되는 항목을 "대체문자열"로 변환
+----------------------------------------------------------------------------------------------------
+("문자열").split(정규표현식)                    "문자열"을 "정규표현식"에 매칭되는 항목으로 쪼개어 배열로 반환
+----------------------------------------------------------------------------------------------------
+(정규표현식).test("문자열")                     "문자열"이 "정규표현식"과 매칭되면 true, 아니면 false반환
+----------------------------------------------------------------------------------------------------
+(정규표현식).exec("문자열")                     match메서드와 유사(단, 무조건 첫번째 매칭 결과만 반환)
+----------------------------------------------------------------------------------------------------
+
+예제)
+// 정규표현식을 담은 변수
+const regex = /apple/; // apple 이라는 단어가 있는지 필터링
+
+// "문자열"이 "정규표현식"과 매칭되면 true, 아니면 false반환
+regex.test("Hello banana and apple hahahaha"); // true
+
+// "문자열"에서 "정규표현식"에 매칭되는 항목들을 배열로 반환
+const txt = "Hello banana and apple hahahaha";
+txt.match(regex); // ['apple']
+
+// "정규표현식"에 매칭되는 항목을 "대체문자열"로 변환
+txt.replace(regex, "watermelon"); // 'Hello banana and watermelon hahahaha'
+
+  </pre>
+</div>
+</body>
+</html>

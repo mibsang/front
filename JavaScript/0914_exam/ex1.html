@@ -24,7 +24,9 @@
 
         if(product.trim() == '' || price.trim() == '' || ea.trim() == '' || isNaN(price) || isNaN(ea)) {
           alert("품목, 단가, 수량을 확인해주세요");
-          productVar.focus();
+          // productVar.focus();
+          priceVar.focus();
+          priceVar.select();
           return false;
         }
 
