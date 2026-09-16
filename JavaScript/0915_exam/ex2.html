@@ -10,7 +10,22 @@
   <script>
     'use strict';
     // 회원가입 유효성 검사(정규식) 0914.test11.hrml 참조
-    
+        function regexCheck() {
+      const regex18 =  "";  // 이메일 형식체크
+
+      let content = document.getElementById("content").value.trim();
+
+      if(content == "") {
+        alert("내용을 입력하세요")
+        document.getElementById("content").focus();
+        document.getElementById("content").select();
+        return false;
+      }
+
+      if(!regex18.test(content)) alert("이메일 형식에 어긋납니다.")
+      
+      else alert("정상적으로 처리 되었습니다.")
+    }
     
 </script>
 </head>

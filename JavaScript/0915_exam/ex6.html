@@ -10,31 +10,41 @@
   <script>
     'use strict';
     
-    let sw = 0;
-    function toggleCheck() {
-      if(sw === 0) {
-        demo.innerHTML = "안녕하세요";
-        sw = 1;
-      }
-      else {
-        demo.innerHTML = "이곳에 메세지가 표시됩니다.";
-        sw = 0;
-      }
+    function fSize32() {
+      demo.style.fontSize = "2em";
+      demo.style.backgroundColor = "blue";
+      demo.style.color = "white";
+    }   
+    function fSize16() {
+      demo.style.fontSize = "1em";
+      demo.style.backgroundColor = "white";
+      demo.style.color = "black";
     }   
 </script>
 </head>
 <body>
 <p><br></p>
 <div class="container">
-  <h2>토글 버튼 연습</h2>
+<h2>속성 변경 연습</h2>
   <hr>
   <form name="myform">
-    <div class="input-group">
-    <input type="button" value="TOGGLE" onclick="toggleCheck()" class="btn btn-success">
+    <div class="input-group mb-2">
+      <input type="button" value="글자크기 2em(32px)" onclick="fSize32()" class="btn btn-success">
+      <input type="button" value="글자크기 1em(16px)" onclick="fSize16()" class="btn btn-primary">
+    </div>
+    <div class="input-group mb-2">
+      <input type="button" value="그림감추기" onclick="(demoImage.style.display='none')" class="btn btn-success">
+      <input type="button" value="그림보이기" onclick="(demoImage.style.display='block')" class="btn btn-primary">
+    </div>
+    <div class="input-group mb-2">
+      <input type="button" value="Reload" onclick="location.reload()" class="btn btn-success">
+      <input type="button" value="네이버" onclick="location.href='https://www.naver.com'" class="btn btn-primary">
     </div>
   </form>
   <hr>
   <div id="demo">이곳에 메세지가 표시됩니다.</div>
+  <hr>
+  <div id="demoImage"><img src="../../Images/12.jpg" width="200px"></div>
 </div>
 </body>
 </html>
