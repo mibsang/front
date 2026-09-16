@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test3.html</title>
+  <link rel="icon" href="data:,">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+    
+    // 폼태그 :document.myform.price.value;
+    // 자바스크립트 : document.getElementById("price").value;
+    // JQuery : $("#id");
+    $(() => {
+      
+      $("#btnCalc").click(()=>{
+        let product = $("#product").val();
+        let price = $("#price").val();
+        let ea = $("#ea").val();
+        let totalP = price * ea;
+  
+        $("#demo").html("총 금액 : " + numberWithCommas(totalP) + "원");
+      });
+      $("#btnChange").click(()=>{
+        $('[type="text"]').css("backgroundColor", "yellow")
+      });
+    });
+
+    // 콤마 변환 함수
+    function numberWithCommas(num) {     
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
+    }
+</script>
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+  }
+  th {
+    background-color: #ddd;
+  }
+</style>
+</head>
+<body>
+<p><br></p>
+<div class="container">
+  <hr>
+  <h2>상품 가격 계산하기</h2>
+  <form name="myform">
+    <table>
+      <tr>
+        <th>상품명</th>
+        <td><input type="text" name="product" id="product" value="냉장고" autofocus class="form-control"></td>
+      </tr>
+      <tr>
+        <th>상품가격</th>
+        <td><input type="number" name="price" id="price" value="10000" class="form-control"></td>
+      </tr>
+      <tr>
+        <th>수량</th>
+        <td><input type="number" name="ea" id="ea" value="2" class="form-control"></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <input type="button" value="속성변경" id="btnChange" class="btn btn-info">
+          <input type="button" value="주문하기" id="btnCalc" class="btn btn-success">
+          <input type="reset" value="다시작성" class="btn btn-warning">
+        </td>
+      </tr>
+    </table>
+  </form>
+  <hr>
+  <div id="demo"></div>
+  <p><br></p>
+</div>
+</body>
+</html>
