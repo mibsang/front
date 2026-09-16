@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test3.html</title>
+  <script src="test3.js"></script>
+  <script>
+    'use strict';
+
+    let member = new Member("김말숙", 29, "회사원");
+    console.log("member : ", member);
+    console.log("성명 : ", member.name);
+    console.log("나이 : ", member.age);
+    console.log("직업 : ", member.job);
+
+    member.name = "이기자"
+    member.age = 20;
+    member.job = "초등학생";
+    console.log("member : ", member);
+
+    // 상속
+    class ChildMember extends Member {};
+
+    let childMember = new ChildMember("소나무", 0, "대학생");
+    console.log("childMember : ", childMember);
+    console.log("name : ", childMember.name);
+    console.log("age : ", childMember.age);
+  </script>
+</head>
+<body>
+  <h2>상속</h2>
+</body>
+</html>

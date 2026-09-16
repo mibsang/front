@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test2.html</title>
+  <script>
+    'use strict'
+
+    class Member{
+
+      // 생성자
+      constructor(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+      }
+
+      get name() {
+        return this._name;
+      }
+      set name(name) {
+        this._name = name;
+      } 
+      get age() {
+        return this._age - 1;
+      }
+      set age(age) {
+        if(age < 1) age = 1;
+        this._age = age;
+      }
+      get job() {
+        return this._job;
+      }
+      // job이 '초등학생/중학생/고등학생'이면 학생으로 저장, 나머지 학생들은 해당 학생명으로 저장 예) 대학생, 대학원생 등
+      set job(job) {
+        if(job === '초등학생' || job === '중학생' || job === '고등학생') job = '학생';
+        this._job = job;
+      }
+
+    }
+  </script>
+</head>
+<body>
+  <h2>Getter/Setter</h2>
+</body>
+</html>
